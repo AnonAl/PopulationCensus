@@ -1,0 +1,3 @@
+class Moderator extends Person {
+
+}
