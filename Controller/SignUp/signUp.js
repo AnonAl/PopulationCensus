@@ -1,28 +1,17 @@
 class SignUP {
 
     signUp() {
-        let signUp = document.querySelector('.elem-of-container:last-child button');
-        let showForm = document.querySelector('.show-form');
-        let closeForm = document.querySelector('.close-form');
+
+        const signUp = document.querySelector('.elem-of-container:last-child button');
+        const showForm = document.querySelector('.hide-form');
+        const closeForm = document.querySelector('.close-elem');
 
         signUp.addEventListener('click', () => {
-            showForm.style.cssText = `
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
-            height: 100%; 
-            background: rgba(38, 54, 63, 0.8);
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 100;
-            `;
+            showForm.classList.add('display-form');
         });
+
         closeForm.addEventListener('click', () => {
-            showForm.style.cssText = `
-            display:none;
-            `;
+            showForm.classList.remove('display-form');
         });
     }
 }

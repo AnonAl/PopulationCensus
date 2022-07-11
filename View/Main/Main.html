@@ -3,90 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <title>Population Census</title>
-    <link rel="stylesheet" type="text/css" href="Header.css">
-    <link rel="stylesheet" type="text/css" href="Main.css">
-    <link rel="stylesheet" type="text/css" href="Footer.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="formStyle.css">
 </head>
 <body>
-<header>
-    <nav class="panel-of-navigation">
-        <div class="container-of-navigation">
-            <div class="elem-of-container">
-                <button>Sign In</button>
-            </div>
-            <div class="elem-of-container">
-                <button>Sign Up</button>
-            </div>
-        </div>
-    </nav>
+<div class="wrapper">
 
-    <div class="show-form">
-        <div class="form-container">
-            <form class="form">
-                <img class="close-form" src="../../View/Pictures/close_111152.svg" width="25px" height="25px">
-                <p>SIGN UP</p>
-                <div class="container-of-elem-form">
-                    <label for="fullName">Full Name</label>
-                    <input class="form-element" type="text" id="fullName">
-                </div>
-                <div class="container-of-elem-form">
-                    <label for="email">Email</label>
-                    <input class="form-element" type="email" id="email">
-                </div>
-                <div class="container-of-elem-form">
-                    <label for="Password">Password</label>
-                    <input class="form-element" type="password" id="Password">
-                </div>
-                <div class="container-of-elem-form">
-                    <label for="repPass">Repeat Password</label>
-                    <input class="form-element" type="password" id="repPass">
-                </div>
-                <div class="container-of-elem-form">
-                    <button class="button-of-form" type="submit">SignUp</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</header>
+    <header class="header">
+        <nav class="panel-of-navigation">
+            <div class="logo">
 
-<main>
-    <div class="main-elem">
-        <div class="head-of-inf-elem">
-            <h3>World Population 2022</h3>
-        </div>
-        <div class="information-elem">
-            <div class="information">
-                <p>
-                    Demography is an important part of the life of modern society. This science allows you to
-                    predict both the decline and growth of the population.
-                </p>
-                <p>
-                    Demographic growth, like decline, often leads to significant problems in a particular habitat.
-                    Population growth, problems: food, drinking water, deforestation, poverty of others, etc.
-                    Mortality of the population, problems: lack of labor, falling economic indicators of a particular
-                    country, etc. Both growth and mortality of the population have both positive and negative sides, so
-                    demographic control plays an important role.
-                </p>
-                <p>
-                    This website is designed to control demographic processes both in individual countries and in the
-                    world
-                    as a whole.
-                </p>
             </div>
-            <div class="picture-of-inf-elem">
-                <img src="../Pictures/723987.svg " width="300px" height="300px">
+            <div class="container-of-navigation">
+                <div class="elem-of-container">
+                    <button>Sign In</button>
+                </div>
+                <div class="elem-of-container">
+                    <button>Sign Up</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hide-form">
+            <div class="form-container">
+                <form class="form">
+                    <div class="close-elem">
+                        <img src="../../View/Pictures/close_111152.svg">
+                    </div>
+                    <div class="header-form">
+                        <h4>SIGN UP</h4>
+                    </div>
+                    <div class="container-of-elem-form">
+                        <label for="name">Name</label>
+                        <input class="form-element" type="text" id="name">
+                    </div>
+                    <div class="container-of-elem-form">
+                        <label for="email">Email</label>
+                        <input class="form-element" type="email" id="email">
+                    </div>
+                    <div class="container-of-elem-form">
+                        <label for="password">Password</label>
+                        <input class="form-element" type="password" id="password">
+                    </div>
+                    <div class="container-of-elem-form">
+                        <label for="repPass">Repeat Password</label>
+                        <input class="form-element" type="password" id="repPass">
+                    </div>
+                    <div class="container-of-elem-form">
+                        <button class="submit-btn" type="button" id="submBtn">SignUp</button>
+                    </div>
+                </form>
             </div>
         </div>
+    </header>
 
-    </div>
-</main>
+    <main class="main">
+        <div class="main-elem">
+            <div class="head-of-inf-elem">
+                <h3>World Population 2022</h3>
+            </div>
+            <div class="information-elem">
+                <div class="information">
+                    <p>
+                        Demography is an important part of the life of modern society. This science allows you to
+                        predict both the decline and growth of the population.
+                    </p>
+                    <p>
+                        Demographic growth, like decline, often leads to significant problems in a particular habitat.
+                        Population growth, problems: food, drinking water, deforestation, poverty of others, etc.
+                        Mortality of the population, problems: lack of labor, falling economic indicators of a
+                        particular
+                        country, etc. Both growth and mortality of the population have both positive and negative sides,
+                        so
+                        demographic control plays an important role.
+                    </p>
+                    <p>
+                        This website is designed to control demographic processes both in individual countries and in
+                        the
+                        world
+                        as a whole.
+                    </p>
+                </div>
+                <div class="picture-of-inf-elem">
+                    <img src="../Pictures/world.svg " width="300px" height="300px">
+                </div>
+            </div>
 
-<footer>
-    <div class="footer-elem">
+        </div>
+    </main>
 
-    </div>
-</footer>
-<script src="../../Controller/SignUp/signUp.js"></script>
-<script src="../../Controller/FormValid/ValidatorsOfForm.js"></script>
+    <footer class="footer">
+        <div class="footer-elem">
+            <div class="contacts">
+                <a href="https://www.instagram.com/_n_al___/">
+                    <img src="../Pictures/icons8-instagram-new.svg">
+                </a>
+            </div>
+            <div class="contacts">
+                <a href="https://www.instagram.com/_n_al___/">
+                    <img src="../Pictures/icons8-facebook-new.svg">
+                </a>
+            </div>
+            <div class="contacts">
+                <a href="https://t.me/A_le_r">
+                    <img src="../Pictures/icons8-telegram-app.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="../../Controller/SignUp/signUp.js"></script>
+    <script src="../../Controller/SignIn/signIn.js"></script>
+    <script src="./script.js"></script>
+    <script src="../../Controller/FormValid/validatorsOfForm.js"></script>
+    <script type="module" src="../../Controller/Data/getData.js"></script>
+</div>
 </body>
 </html>
