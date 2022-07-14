@@ -3,17 +3,17 @@ class ValidatorsOfForm {
     email;
     password;
     repeatPassword;
-    submit = document.querySelector('button[type=button]');
+    submitBtn = document.querySelector('button[type=button]');
     form = document.querySelector('.form');
 
     fieldHighlighting(eventTarget) {
         eventTarget.classList.add('field-highlight');
-        this.submit.setAttribute('disabled', '');
+        this.submitBtn.setAttribute('disabled', '');
     }
 
     fieldUnHighlighting(eventTarget) {
         eventTarget.classList.remove('field-highlight');
-        this.submit.disabled = false;
+        this.submitBtn.disabled = false;
     }
 
     correctName() {
@@ -50,14 +50,28 @@ class ValidatorsOfForm {
         }
     }
 
-    submitButton() {
-        this.submit.addEventListener('click', () => {
-            if (this.correctName() || this.correctEmail() || this.correctPassword() || this.correctRepPassword()) {
-                this.form.addEventListener('submit', (event) => event.preventDefault());
-                setTimeout(() => alert('The form has empty fields !!!'), 500);
-            } else {
-                this.form.submit();
-                alert('Registration success');
+    submitBtnButton() {
+        this.submitBtn.addEventListener('click', () => {
+            switch (this.submitBtn.textContent) {
+                case 'Sign Up':
+                    if (this.correctName() || this.correctEmail() || this.correctPassword() || this.correctRepPassword()) {
+                        this.form.addEventListener('submitBtn', (event) => event.preventDefault());
+                        alert('The form has empty fields \n or incorrect value in field  !!!');
+                    } else {
+                        this.form.submit();
+                        alert('Registration success');
+                    }
+                    break;
+                case 'Sign In':
+                    if (this.correctEmail() || this.correctPassword()) {
+                        this.form.addEventListener('submitBtn', (event) => event.preventDefault());
+                        alert('The form has empty fields \nor incorrect value in field!!!');
+
+                    } else {
+                        this.form.submit();
+                        alert('Login completed success!');
+                    }
+                    break;
             }
         });
 
@@ -69,7 +83,6 @@ class ValidatorsOfForm {
                 case 'name':
                     if (this.correctName()) {
                         this.fieldHighlighting(event.target);
-                        console.log('dsfsd');
                     } else {
                         this.fieldUnHighlighting(event.target);
                     }
@@ -97,7 +110,7 @@ class ValidatorsOfForm {
                     break;
             }
         });
-        this.submitButton();
+        this.submitBtnButton();
     }
 }
 

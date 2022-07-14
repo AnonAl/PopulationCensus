@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Population Census</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="Header/header.css">
+    <link rel="stylesheet" type="text/css" href="Main/main.css">
+    <link rel="stylesheet" type="text/css" href="Footer/footer.css">
     <link rel="stylesheet" type="text/css" href="formStyle.css">
 </head>
 <body>
@@ -29,7 +29,7 @@
 
         <div class="hide-form">
             <div class="form-container">
-                <form class="form">
+                <form class="form" name="form">
                     <div class="close-elem">
                         <img src="../../View/Pictures/close_111152.svg">
                     </div>
@@ -45,8 +45,8 @@
                         <input class="form-element" type="email" id="email">
                     </div>
                     <div class="container-of-elem-form">
-                        <label for="password">Password</label>
-                        <input class="form-element" type="password" id="password">
+                        <label for="password" >Password</label>
+                        <input class="form-element" type="password" id="password" >
                     </div>
                     <div class="container-of-elem-form">
                         <label for="repPass">Repeat Password</label>
@@ -114,10 +114,10 @@
             </div>
         </div>
     </footer>
-    <script src="../../Controller/SignUp/signUp.js"></script>
-    <script src="../../Controller/SignIn/signIn.js"></script>
-    <script src="./script.js"></script>
-    <script src="../../Controller/FormValid/validatorsOfForm.js"></script>
+    <script src="index.js"></script>
+    <script type="module" src="Header/navContainer.js"></script>
+    <script type="module" src="../../Controller/Form/form.js"></script>
+    <script type="module" src="../../Controller/FormValid/validatorsOfForm.js"></script>
     <script type="module" src="../../Controller/Data/getData.js"></script>
 </div>
 </body>
