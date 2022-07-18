@@ -17,19 +17,19 @@
     position: relative;
 }
 
-.container-of-elem-form {
+.form-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.container-of-elem-form label {
+.form-group label {
     padding: 0 0 5px 2px;
     color: black;
     font-weight: bold;
 }
 
-.form-element {
+.form-control {
     height: 35px;
     width: 270px;
     border: 1px solid #999999;
@@ -42,7 +42,7 @@
     margin-bottom: 30px;
 }
 
-.form-element:focus {
+.form-control:focus {
     box-shadow: 0 2px 2px #61ef2c;
 }
 

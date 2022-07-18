@@ -4,7 +4,7 @@ export function form(event) {
     const closeForm = document.querySelector('.close-elem');
     const form = document.querySelector('.form');
     const h4 = document.querySelector('.header-form h4');
-    const btn = document.querySelector('.container-of-elem-form button');
+    const btn = document.querySelector('.form-group button');
     const hiddenElSignIn = [];
     const inputs = [h4, btn];
 

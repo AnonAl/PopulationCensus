@@ -36,23 +36,23 @@
                     <div class="header-form">
                         <h4>SIGN UP</h4>
                     </div>
-                    <div class="container-of-elem-form">
+                    <div class="form-group">
                         <label for="name">Name</label>
-                        <input class="form-element" type="text" id="name">
+                        <input class="form-control" type="text" id="name" name="name">
                     </div>
-                    <div class="container-of-elem-form">
+                    <div class="form-group">
                         <label for="email">Email</label>
-                        <input class="form-element" type="email" id="email">
+                        <input class="form-control" type="email" id="email" name="email">
                     </div>
-                    <div class="container-of-elem-form">
+                    <div class="form-group">
                         <label for="password" >Password</label>
-                        <input class="form-element" type="password" id="password" >
+                        <input class="form-control" type="password" id="password" name="password">
                     </div>
-                    <div class="container-of-elem-form">
+                    <div class="form-group">
                         <label for="repPass">Repeat Password</label>
-                        <input class="form-element" type="password" id="repPass">
+                        <input class="form-control" type="password" id="repPass" name="repPass">
                     </div>
-                    <div class="container-of-elem-form">
+                    <div class="form-group">
                         <button class="submit-btn" type="button" id="submBtn">SignUp</button>
                     </div>
                 </form>
@@ -114,11 +114,14 @@
             </div>
         </div>
     </footer>
+
     <script src="index.js"></script>
     <script type="module" src="Header/navContainer.js"></script>
     <script type="module" src="../../Controller/Form/form.js"></script>
     <script type="module" src="../../Controller/FormValid/validatorsOfForm.js"></script>
     <script type="module" src="../../Controller/Data/getData.js"></script>
+    <script async src="../../Controller/MongoDB/connectToDb.js"></script>
+    <script async src="../../Server/server.js"></script>
 </div>
 </body>
 </html>
