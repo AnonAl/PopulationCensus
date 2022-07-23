@@ -1,3 +1,3 @@
-class Administrator extends Person {
+class Administrator extends User {
 
 }

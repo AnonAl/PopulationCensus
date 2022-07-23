@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Population Census</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="View/MainPage/header.css">
+    <link rel="stylesheet" type="text/css" href="View/MainPage/main.css">
+    <link rel="stylesheet" type="text/css" href="View/MainPage/footer.css">
+    <link rel="stylesheet" type="text/css" href="View/MainPage/formStyle.css">
+</head>
+<body>
+<div class="wrapper">
+
+    <header class="header">
+        <nav class="panel-of-navigation">
+            <div class="logo">
+
+            </div>
+            <div class="container-of-navigation">
+                <div class="elem-of-container">
+                    <button>Sign In</button>
+                </div>
+                <div class="elem-of-container">
+                    <button>Sign Up</button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hide-form">
+            <div class="form-container">
+                <form class="form" name="form" method="post">
+                    <div class="close-elem">
+                        <img src="View/Pictures/close_111152.svg">
+                    </div>
+                    <div class="header-form">
+                        <h4>SIGN UP</h4>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input class="form-control" type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input class="form-control" type="password" id="password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="repPass">Repeat Password</label>
+                        <input class="form-control" type="password" id="repPass" name="repPass">
+                    </div>
+                    <div class="form-group">
+                        <button class="submit-btn" type="button" id="submBtn">SignUp</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-elem">
+            <div class="head-of-inf-elem">
+                <h3>World Population 2022</h3>
+            </div>
+            <div class="information-elem">
+                <div class="information">
+                    <p>
+                        Demography is an important part of the life of modern society. This science allows you to
+                        predict both the decline and growth of the population.
+                    </p>
+                    <p>
+                        Demographic growth, like decline, often leads to significant problems in a particular habitat.
+                        Population growth, problems: food, drinking water, deforestation, poverty of others, etc.
+                        Mortality of the population, problems: lack of labor, falling economic indicators of a
+                        particular
+                        country, etc. Both growth and mortality of the population have both positive and negative sides,
+                        so
+                        demographic control plays an important role.
+                    </p>
+                    <p>
+                        This website is designed to control demographic processes both in individual countries and in
+                        the
+                        world
+                        as a whole.
+                    </p>
+                </div>
+                <div class="picture-of-inf-elem">
+                    <img src="View/Pictures/world.svg " width="300px" height="300px">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-elem">
+            <div class="contacts">
+                <a href="https://www.instagram.com/_n_al___/">
+                    <img src="View/Pictures/icons8-instagram-new.svg">
+                </a>
+            </div>
+            <div class="contacts">
+                <a href="https://www.instagram.com/_n_al___/">
+                    <img src="View/Pictures/icons8-facebook-new.svg">
+                </a>
+            </div>
+            <div class="contacts">
+                <a href="https://t.me/A_le_r">
+                    <img src="View/Pictures/icons8-telegram-app.svg">
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+        <script type="module" src="index.js"></script>
+        <script type="module" src="Server/server.js"></script>
+        <script type="module" src="Controller/FormValid/validatorsOfForm.js"></script>
+        <script type="module" src="View/MainPage/navContainer.js"></script>
+        <script type="module" src="/Model/Country/Country.js"></script>
+        <script type="module" src="Controller/MongoDB/connectToDb.js"></script>
+</body>
+</html>

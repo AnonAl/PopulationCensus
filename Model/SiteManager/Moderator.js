@@ -1,3 +1,3 @@
-class Moderator extends Person {
+class Moderator extends User {
 
 }
