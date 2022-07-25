@@ -1,16 +1,9 @@
-import { getData } from '../../Model/Data/getData.js'
-class Country {
-    nameOfCountry;
-    id_nation;
-    id_year;
-    nation;
-    population;
-    slug_nation;
-    year;
-    language;
-    economic;
+export class Country {
 
-    constructor(id_nation, id_year, nation, population, slug_nation, year, nameOfCountry, language) {
+    economic;
+    year;
+
+    constructor(id_nation, nation, id_year, year, population, slug_nation, nameOfCountry, language) {
         this.id_nation = id_nation;
         this.id_year = id_year;
         this.nation = nation;
@@ -61,16 +54,5 @@ class Country {
         return this.economic;
     }
 
-    getCountry() {
-        getData('https://datausa.io/api/data?drilldowns=Nation&measures=Population')
-            .then(obj => Object.values(obj)
-                .forEach(data => {
-                    console.log(data);
-                    Object.values(data)
-                        .forEach(country => Object.keys(country)
-                            .forEach(popOfCountry => console.log('Key: ' + popOfCountry + '\n' + 'Value: ' + country[popOfCountry])))})
-            ).catch(err => console.log(err.message));
-    }
-
 }
-new Country().getCountry();
+
