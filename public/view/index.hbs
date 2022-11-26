@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Population Census</title>
+    <link rel="icon" type="image/x-icon" href="../images/favico.png">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/header.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/main.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/footer.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/formStyle.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheet/table.css">
+
+</head>
+<body>
+<div class="wrapper">
+    {{> nav}}
+    <main class="main">
+        <div class="main-elem">
+            <div class="head-of-inf-elem">
+                <h3>World Population 2022</h3>
+            </div>
+            <div class="information-elem">
+                <div class="information">
+                    <p>
+                        Demography is an important part of the life of modern society. This science allows you to
+                        predict both the decline and growth of the population.
+                    </p>
+                    <p>
+                        Demographic growth, like decline, often leads to significant problems in a particular habitat.
+                        Population growth, problems: food, drinking water, deforestation, poverty of others, etc.
+                        Mortality of the population, problems: lack of labor, falling economic indicators of a
+                        particular
+                        country, etc. Both growth and mortality of the population have both positive and negative sides,
+                        so
+                        demographic control plays an important role.
+                    </p>
+                    <p>
+                        This website is designed to control demographic processes both in individual countries and in
+                        the
+                        world
+                        as a whole.
+                    </p>
+                </div>
+                <div class="picture-of-inf-elem">
+                    <img src="../images/world.svg" width="300px" height="300px" alt="World picture">
+                </div>
+            </div>
+            {{> signInForm}}
+            {{> signUpForm}}
+            {{> table}}
+        </div>
+    </main>
+    {{> footer}}
+</div>
+
+<!--<script type="module" src="index.js"></script>-->
+<script type="module" src="form/formBtns.js"></script>
+<script type="module" src="../javascript/controller/apiData/setApiData.js"></script>
+<!--<script type="module" src="../../app.js"></script>-->
+<!--<script type="module" src="../mongoDB/connectToDb.js"></script>-->
+<!--<script type="module" src="../mongoDB/getAllDBData.js"></script>-->
+<script type="module" src="../javascript/controller/validators/validatorsOfForm.js"></script>
+<script type="module" src="../javascript/controller/form/chooseForm.js"></script>
+<script type="module" src="../javascript/controller/form/submitForm.js"></script>
+<script type="module" src="../model/country/country.js"></script>
+<script type="module" src="../javascript/controller/apiData/displayApiData.js"></script>
+
+</body>
+</html>

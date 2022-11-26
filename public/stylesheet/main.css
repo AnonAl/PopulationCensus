@@ -1,0 +1,31 @@
+main {
+    flex: 1 1 auto;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.main-elem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.information-elem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.information {
+    text-align: justify;
+    line-height: 1.2em;
+    text-indent: 1.5em;
+}
+
+.information p {
+    padding: 0 100px 0 100px;
+}
+

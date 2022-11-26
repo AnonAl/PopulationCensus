@@ -1,0 +1,19 @@
+.countries {
+    /*display: none;*/
+}
+
+.countries table {
+    border-collapse: collapse;
+    margin: 50px 0 50px 0;
+}
+
+.countries thead th {
+    background-color: #bb92e7;
+}
+
+.countries th, td {
+    padding: 20px;
+    border: 1px black solid;
+    text-align: center;
+    vertical-align: center;
+}

@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #26363f;
+}
+
+.footer-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+
+.contacts img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    transition: filter, transform 0.5s ease-in-out;
+}
+
+.contacts img:hover {
+    cursor: pointer;
+    filter: opacity(0.3) drop-shadow(0 0 0 #89faff) brightness(3);
+    transform: rotate(360deg);
+}
