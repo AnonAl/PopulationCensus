@@ -1,39 +1,40 @@
 import {ValidatorsOfForm} from '../validators/validatorsOfForm.js';
 import {User} from "../../../model/user/User.js";
 
-function submitForm() {
-    const correctForm = new ValidatorsOfForm();
-    const submitBtn = document.querySelector('.submit-btn');
+export function submitForm(form) {
+
+    const validator = new ValidatorsOfForm();
     const valOfElForm = [];
-    const elementsOfForm = document.querySelectorAll('.form-group input:not(.form-group:last-child)');
-    const form = document.querySelector('.form');
 
-    // console.log(submitBtn);
+    const submitButton = document.querySelector('.' + form.className + ' button[type="button"]');
+    // console.log(submitButton);
+    const elementsOfForm = document.querySelectorAll('.' + form.className + ' input:not(.form-group:last-child)');
 
-    submitBtn.addEventListener('click', () => {
+    const handler = () => {
+
         elementsOfForm.forEach(element => {
             valOfElForm.push(element.value);
         });
 
         const user = new User(...valOfElForm);
+        valOfElForm.length = 0;
 
-        if (correctForm.formValidation()) {
-            fetch('/formRegistration', {
+        if (validator.checkFormBeforeSend(form)) {
+            console.log(user);
+            fetch('http://localhost:3000/formRegistration', {
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify(user)
-            })
+            }).then(response => console.log(response));
         } else {
-            form.addEventListener('submit', (e) => e.preventDefault());
+            // console.log('lal');
+            form.addEventListener('submit', (e) => e.preventDefault(), {once: true});
         }
-    });
-    console.log(valOfElForm);
+    };
+
+    submitButton.addEventListener('click', handler);
+    // submitButton.removeEventListener('click', handler);
+    // console.log(valOfElForm);
 }
 
-async function getData() {
-    const user = await fetch('/formRegistration').then(res => console.log(res));
-    console.log(user);
-}
-
-submitForm();
-// getData();
+// submitForm();

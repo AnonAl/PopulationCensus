@@ -1,11 +1,11 @@
-.form-container {
+.reg-form-container, .signIn-form-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.form {
+.reg-form, .signIn-form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -18,19 +18,19 @@
     user-select: none;
 }
 
-.form-group {
+.reg-form-group, .signIn-form-group {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.form-group label {
+:is(.reg-form-group, .signIn-form-group) label {
     padding: 0 0 5px 2px;
     color: black;
     font-weight: bold;
 }
 
-.form-control {
+.reg-form-control, .signIn-form-control {
     height: 35px;
     width: 270px;
     border: 1px solid #999999;
@@ -44,11 +44,11 @@
     margin-bottom: 30px;
 }
 
-.form-control:focus {
+:is(.reg-form-control, .signIn-form-control):focus {
     box-shadow: 0 2px 2px #61ef2c;
 }
 
-.submit-btn {
+.reg-submit-btn, .signIn-submit-btn {
     width: 280px;
     height: 35px;
     border-radius: 15px;
@@ -60,17 +60,13 @@
     position: relative;
 }
 
-.submit-btn:hover {
+:is(.reg-submit-btn, .signIn-submit-btn):hover {
     cursor: pointer;
     background-color: #b08bdc;
     color: white;
 }
 
-.hide-form-reg {
-    display: none;
-}
-
-.hide-form-in {
+.hide-reg-form, .hide-signIn-form {
     display: none;
 }
 
@@ -87,12 +83,12 @@
     top: 0;
 }
 
-.close-elem {
+.reg-close-elem, .signIn-close-elem {
     position: relative;
     width: 100%;
 }
 
-.close-elem img {
+:is(.reg-close-elem, .signIn-close-elem) img {
     position: absolute;
     width: 26px;
     height: 26px;
@@ -100,7 +96,7 @@
     top: -35px;
 }
 
-.close-elem img:hover {
+:is(.reg-close-elem, .signIn-close-elem) img:hover {
     cursor: pointer;
     border-bottom: 1px solid black;
 }

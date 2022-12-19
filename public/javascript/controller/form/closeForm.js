@@ -1,14 +1,11 @@
-export function closeForm() {
+export function closeForm(form) {
 
-    const closeElements = document.getElementsByClassName('close-elem');
+    const closeElement = document.querySelector('.' + form.classList[0] + ' img[alt="Btn for close form"]').parentElement;
 
-    const displayFormReg = document.querySelector('.hide-form-reg');
-    const displayFormIn = document.querySelector('.hide-form-in');
+    closeElement.addEventListener('click', () => {
+        form.classList.remove('display-form');
+        // form.reset();
+    }, {once: true});
 
-    for (let clsElem of closeElements) {
-        clsElem.addEventListener('click', () => {
-            displayFormReg.classList.remove('display-form');
-            displayFormIn.classList.remove('display-form');
-        })
-    }
 }
+
