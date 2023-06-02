@@ -1,27 +1,30 @@
-<div class="hide-reg-form">
+<link rel="stylesheet" type="text/css" href="../../stylesheet/formStyle.css">
+<div class="hide-reg-form display-form">
     <div class="reg-form-container">
         <form class="reg-form" name="form">
             <div class="reg-close-elem">
+                <a href="http://localhost:3000" target="_self">
                 <img src="../../images/close_111152.svg" alt="Btn for close form">
+                </a>
             </div>
             <div class="reg-form-header">
                 <h4>SIGN UP</h4>
             </div>
             <div class="reg-form-group">
-                <label for="name">Name</label>
-                <input class="reg-form-control" type="text" name="name">
+<!--                <label for="name">Name</label>-->
+                <input class="reg-form-control" type="text" name="name" placeholder="Name">
             </div>
             <div class="reg-form-group">
-                <label for="email">Email</label>
-                <input class="reg-form-control" type="email" name="email">
+<!--                <label for="email">Email</label>-->
+                <input class="reg-form-control" type="email" name="email" placeholder="Email">
             </div>
             <div class="reg-form-group">
-                <label for="password">Password</label>
-                <input class="reg-form-control" type="password" name="password">
+<!--                <label for="password">Password</label>-->
+                <input class="reg-form-control" type="password" name="password" placeholder="Password">
             </div>
             <div class="reg-form-group">
-                <label for="repPass">Repeat Password</label>
-                <input class="reg-form-control" type="password" name="repPass">
+<!--                <label for="repPass">Repeat Password</label>-->
+                <input class="reg-form-control" type="password" name="repPass" placeholder="RepPassword">
             </div>
             <div class="reg-form-group">
                 <button type="button" class="reg-submit-btn">SIGN UP</button>
@@ -29,3 +32,6 @@
         </form>
     </div>
 </div>
+<script async type="module" src="../../javascript/form/validSignUpForm.js"></script>
+<script async type="module" src="../../view/form/formBtns.js"></script>
+

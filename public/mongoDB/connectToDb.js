@@ -1,12 +1,11 @@
-import {MongoClient} from "mongodb";
+import { MongoClient } from "mongodb";
 
-const url = 'mongodb://127.0.0.1:27017';
+const url = "mongodb://127.0.0.1:27017";
 export const mongoClient = new MongoClient(url);
 
-
-export async function run() {
+export async function run () {
     try {
-        // Подключаемся к серверу
+    // Подключаемся к серверу
         await mongoClient.connect();
         // обращаемся к базе данных admin
         const db = mongoClient.db("population");
@@ -16,8 +15,7 @@ export async function run() {
     } catch (e) {
         console.log(e);
     } finally {
-        // await mongoClient.close();
-        // console.log('connection to db is close');
+    // await mongoClient.close();
+    // console.log('connection to db is close');
     }
 }
-

@@ -1,6 +1,5 @@
 export class Country {
-
-    constructor(economic, id_nation, nation, id_year, year, population, slug_nation, nameOfCountry, language) {
+    constructor (economic, id_nation, nation, id_year, year, population, slug_nation, nameOfCountry, language) {
         this._economic = economic;
         this._id_nation = id_nation;
         this._id_year = id_year;
@@ -12,34 +11,39 @@ export class Country {
         this._language = language;
     }
 
-    get language() {
+    get language () {
         return this._language;
     }
-    get nameOfCountry() {
+
+    get nameOfCountry () {
         return this._nameOfCountry;
     }
-    get year() {
+
+    get year () {
         return this._year;
     }
-    get slug_nation() {
+
+    get slug_nation () {
         return this._slug_nation;
     }
-    get population() {
+
+    get population () {
         return this._population;
     }
-    get nation() {
+
+    get nation () {
         return this._nation;
     }
-    get id_year() {
+
+    get id_year () {
         return this._id_year;
     }
-    get id_nation() {
+
+    get id_nation () {
         return this._id_nation;
     }
-    get economic() {
+
+    get economic () {
         return this._economic;
     }
-
-
 }
-

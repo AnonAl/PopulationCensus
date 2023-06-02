@@ -1,19 +1,20 @@
-<div class="hide-signIn-form">
+<link rel="stylesheet" type="text/css" href="../../stylesheet/formStyle.css">
+<div class="hide-signIn-form display-form">
     <div class="signIn-form-container">
         <form class="signIn-form" name="form">
             <div class="signIn-close-elem">
-                <img src="../../images/close_111152.svg" alt="Btn for close form">
+                <a href="http://localhost:3000" target="_self">
+                    <img src="../../images/close_111152.svg" alt="Btn for close form">
+                </a>
             </div>
             <div class="signIn-form-header">
                 <h4>SIGN IN</h4>
             </div>
             <div class="signIn-form-group">
-                <label for="email">Email</label>
-                <input class="signIn-form-control" type="email" name="email">
+                <input class="signIn-form-control" type="email" name="email" placeholder="Email">
             </div>
             <div class="signIn-form-group">
-                <label for="password">Password</label>
-                <input class="signIn-form-control" type="password"  name="password">
+                <input class="signIn-form-control" type="password" name="password" placeholder="Password">
             </div>
             <div class="signIn-form-group">
                 <button type="button" class="signIn-submit-btn">SIGN IN</button>
@@ -21,3 +22,6 @@
         </form>
     </div>
 </div>
+<script type="module" src="../../javascript/form/validSignInForm.js"></script>
+<script type="module" src="../../view/form/formBtns.js"></script>
+
